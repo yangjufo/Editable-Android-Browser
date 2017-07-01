@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/dialog_fileName"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/dialog_back"
+        >
+
+        <TextView
+            android:id="@+id/dialog_fileName_title"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:text="@string/fileName"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <EditText
+            android:id="@+id/dialog_fileName_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/blank"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@null"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dialog_savePath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/dialog_back"
+        >
+
+        <TextView
+            android:id="@+id/dialog_savePath_title"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:text="@string/savePath"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+
+        <TextView
+            android:id="@+id/dialog_savePath_enter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="/storage/emulated/0/webbo"
+            android:text="/storage/emulated/0/webbo"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@null"
+            />
+    </LinearLayout>
+
+</LinearLayout>

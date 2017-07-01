@@ -1,0 +1,234 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFF1"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/activity_pageattr_pageName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EFEFF1" >
+
+        <TextView
+            android:id="@+id/activity_pageattr_pageName_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pageAttr"
+            android:textColor="#999999"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"/>
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/activity_pageattr_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/activity_pageattr_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/attr_back"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/activity_pageattr_title_key"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.3"
+                    android:text="@string/webPageTitle"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/activity_pageattr_title_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="0.7"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/activity_pageattr_resultShowURL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/attr_back"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/activity_pageattr_resultShowURL_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/activity_pageattr_resultShowURL_copy"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    android:layout_above="@+id/secondhr"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="1.5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button"
+                    android:text="@string/copy"
+                    android:textColor="#777D82"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/secondhr"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/activity_pageattr_resultShowURL_key"
+                    android:layout_margin="5dp"
+                    android:background="#C4C4C4" />
+
+                <TextView
+                    android:id="@+id/activity_pageattr_resultShowURL_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/secondhr"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/kuozhan"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_below="@id/activity_pageattr_resultShowURL_value"
+                    android:layout_marginTop="5dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/activity_pageattr_currentPageUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/attr_back" >
+
+                <TextView
+                    android:id="@+id/activity_pageattr_currentPageUrl_key"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/currentPageUrl"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/activity_pageattr_currentPageUrl_copy"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp"
+                    android:layout_above="@+id/hr"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="1.5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button"
+                    android:text="@string/copy"
+                    android:textColor="#777D82"
+                    android:textSize="14sp" />
+
+                <View
+                    android:id="@+id/hr"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/activity_pageattr_currentPageUrl_key"
+                    android:layout_margin="5dp"
+                    android:background="#C4C4C4" />
+
+                <TextView
+                    android:id="@+id/activity_pageattr_currentPageUrl_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hr"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="16sp" />
+
+                <View
+                    android:id="@+id/secondkuozhan"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_below="@id/activity_pageattr_currentPageUrl_value"
+                    android:layout_marginTop="5dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_pageattr_pageOtherAttr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/attr_back"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/activity_pageattr_pageOtherAttr_size"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/activity_pageattr_pageOtherAttr_size_key"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pageSize"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/activity_pageattr_pageOtherAttr_size_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/activity_pageattr_pageOtherAttr_currentPageEncoding"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/activity_pageattr_pageOtherAttr_currentPageEncoding_key"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/currentPageEncoding"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/activity_pageattr_pageOtherAttr_currentPageEncoding_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

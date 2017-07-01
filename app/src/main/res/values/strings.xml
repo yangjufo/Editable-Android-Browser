@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">via</string>
+    <string name="action_settings">设置</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="webUrlHint">输入网址</string>
+    <string name="webUrlGoto">进入</string>
+    <string name="webUrlCancel">取消</string>
+    <string name="tools">工具</string>
+    <string name="refresh">刷新</string>
+    <string name="divider">分割</string>
+    <string name="search">搜索</string>
+    <string name="favorite">书签列表</string>
+    <string name="hisotry">历史记录</string>
+    <string name="modifyfavorites">修改书签</string>
+    <string name="deletefavorites">删除书签</string>
+    <string name="deletehistory">删除历史</string>
+    <string name="deleteAllHistory">清空历史</string>
+    <string name="name">名称：</string>
+    <string name="url">网址：</string>
+    <string name="blank"> </string>
+    <string name="phone">电话</string>
+    <string name="email">邮件</string>
+    <string name="map">地图</string>
+    <string name="picture">图片</string>
+    <string name="viewImage">查看图片</string>
+    <string name="saveImage">保存图片</string>
+    <string name="viewImageAttributes">查看属性</string>
+    <string name="link">链接</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="filemanagerTitle">选择存储目录</string>
+    <string name="filemanagerNewDirectory">新建目录</string>
+    <string name="filemanagerItemIcon">图标</string>
+    <string name="fileName">文件名：</string>
+    <string name="savePath">保存路径：</string>
+    <string name="defaultPath">/mnt/sdcard/webbrowserX/download/</string>
+    <string name="createNewFloder">新的目录</string>
+    <string name="deleteFloder">删除目录</string>
+    <string name="newNameForFloder">重命名</string>
+    <string name="webPageTitle">网页标题：</string>
+    <string name="currentPageUrl">当前页面URL</string>
+    <string name="copy">复制</string>
+    <string name="returnStr">返回</string>
+    <string name="pageAttr">页面属性</string>
+    <string name="pageSize">页面大小：</string>
+    <string name="currentPageEncoding">当前页面编码：</string>
+    <string name="choosedPictureURL">选中图片链接URL</string>
+    <string name="choosedLinkedURL">选中链接URL</string>
+
+</resources>

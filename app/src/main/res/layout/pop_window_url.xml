@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal">
+    <View
+        android:id="@+id/horizontal_line"
+        android:layout_height="1px"
+        android:layout_width="match_parent"
+        android:background="#C4C4C4" />
+    <LinearLayout
+        android:layout_below="@+id/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="#EFEFF1">
+        <ImageButton
+            android:id="@+id/copy_url"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:src="@drawable/copy"/>
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="#C4C4C4" />
+        <ImageButton
+            android:id="@+id/qr_code"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:src="@drawable/qr_code" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#EFEFF1"
+    android:orientation="vertical"
+    >
+
+
+    <TextView
+        android:id="@+id/histories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="left|bottom"
+        android:text="@string/hisotry"
+        android:textColor="#999999"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C4C4C4"/>
+
+
+    <FrameLayout
+        android:id="@+id/histories_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/histories" >
+
+        <ListView
+            android:id="@+id/histories_item_content"
+            android:listSelector="@drawable/favandhis_list_view"
+            android:cacheColorHint="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#C4C4C4"
+            android:dividerHeight="1dp">
+        </ListView>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:layout_margin="5dp"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/filemanager_item_icon"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.2"
+        android:contentDescription="@string/filemanagerItemIcon" />
+
+    <TextView
+        android:id="@+id/filemanager_item_filePath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/filemanager_item_childnums"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/filemanager_item_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+
+    <LinearLayout
+        android:id="@+id/filemanager_item_info"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.8"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/filemanager_item_info_name"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/filemanager_item_info_numsAndDate"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal"
+            android:textColor="#E2E2E2"
+            android:textSize="13sp" >
+
+            <TextView
+                android:id="@+id/filemanager_item_info_numsAndDate_nums"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:textColor="#999999"
+                />
+
+            <TextView
+                android:id="@+id/filemanager_item_info_numsAndDate_date"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:textColor="#999999"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

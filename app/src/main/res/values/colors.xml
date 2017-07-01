@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EFEFF1</color>
+    <color name="colorPrimaryDark">#EFEFF1</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="penRed">#FF0000</color>
+    <color name="penGreen">#00FF00</color>
+    <color name="penBlue">#0000FF</color>
+    <color name="penMix">#DDFFFF</color>
+</resources>
