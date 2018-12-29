@@ -20,7 +20,7 @@
             android:id="@+id/private_browsing"
             android:layout_width="match_parent"
             android:layout_height="36dp"
-            android:text="无痕浏览"
+            android:text="@string/Private_Mode"
             android:background="#EFEFF1"/>
 
         <View
@@ -32,7 +32,7 @@
             android:id="@+id/add_favorite_button"
             android:layout_width="match_parent"
             android:layout_height="36dp"
-            android:text="收藏新闻"
+            android:text="@string/save_page"
             android:background="#EFEFF1"/>
 
         <View
@@ -44,7 +44,7 @@
             android:id="@+id/show_favorite_button"
             android:layout_width="match_parent"
             android:layout_height="36dp"
-            android:text="查看收藏"
+            android:text="@string/bookmark"
             android:background="#EFEFF1"/>
 
         <View
@@ -55,7 +55,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="36dp"
-            android:text="历史记录"
+            android:text="@string/history"
             android:background="#EFEFF1"
             android:id="@+id/show_history_button"/>
 
@@ -67,7 +67,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="36dp"
-            android:text="新闻截图"
+            android:text="@string/capture_page"
             android:background="#EFEFF1"
             android:id="@+id/page_screenshot"/>
 
@@ -79,7 +79,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="36dp"
-            android:text="全屏截图"
+            android:text="@string/capture_screen"
             android:background="#EFEFF1"
             android:id="@+id/window_screenshot"/>
 
@@ -91,7 +91,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="36dp"
-            android:text="编辑新闻"
+            android:text="@string/edit_page"
             android:background="#EFEFF1"
             android:id="@+id/page_edit"/>
 

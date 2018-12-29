@@ -9,7 +9,7 @@
         android:id="@+id/dialog_createNewFloder_floderName"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:hint="@string/createNewFloder"
+        android:hint="@string/createNewFolder"
         android:layout_margin="10dp"
         />
 

@@ -210,86 +210,86 @@ public class FavAndHisActivity extends Activity {
                 item_name_input.setText(item_name);
                 item_url_input.setText(item_url);
                 new AlertDialog.Builder(FavAndHisActivity.this)
-                        .setTitle("编辑书签")
+                        .setTitle("Edit bookmark")
                         .setView(modifyFavoritesView)
-                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
 
                             @Override
                             public void onClick(DialogInterface dialog, int width) {
                                 if (favAndHisManager.modifyFavorite(item_id, item_name_input.getText().toString(),
                                         item_url_input.getText().toString())) {
-                                    Toast.makeText(FavAndHisActivity.this, "修改成功", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(FavAndHisActivity.this, "Bookmark edited", Toast.LENGTH_SHORT).show();
                                     initDataFavorites();
                                     favoriteContent.invalidate();
                                 } else {
-                                    Toast.makeText(FavAndHisActivity.this, "修改失败", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(FavAndHisActivity.this, "Failed", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         })
-                        .setNegativeButton("取消", null)
+                        .setNegativeButton("Cancel", null)
                         .create()
                         .show();
             } else if (view.getId() == R.id.item_longclicked_deleteFavorites) {
                 new AlertDialog.Builder(FavAndHisActivity.this)
-                        .setTitle("删除书签")
-                        .setMessage("是否要删除\"" + item_name + "\"这个书签？")
-                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        .setTitle("Delete bookmark")
+                        .setMessage("Delete\"" + item_name + "\"？")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
 
                             @Override
                             public void onClick(DialogInterface dialog, int width) {
                                 if (favAndHisManager.deleteFavorite(item_id)) {
                                     //删除成功
-                                    Toast.makeText(FavAndHisActivity.this, "删除成功", Toast.LENGTH_SHORT);
+                                    Toast.makeText(FavAndHisActivity.this, "Bookmark deleted", Toast.LENGTH_SHORT);
                                     initDataFavorites();
                                     favoriteContent.invalidate();
                                 } else {
-                                    Toast.makeText(FavAndHisActivity.this, "删除失败", Toast.LENGTH_SHORT);
+                                    Toast.makeText(FavAndHisActivity.this, "Failed", Toast.LENGTH_SHORT);
                                 }
                             }
                         })
-                        .setNegativeButton("取消", null)
+                        .setNegativeButton("Cancel", null)
                         .create()
                         .show();
             } else if (view.getId() == R.id.item_longclicked_deleteHistory) {
                 new AlertDialog.Builder(FavAndHisActivity.this)
-                        .setTitle("删除历史")
-                        .setMessage("是否要删除\"" + item_name + "\"这个历史？")
-                        .setPositiveButton("删除", new DialogInterface.OnClickListener() {
+                        .setTitle("Delete history")
+                        .setMessage("Delete\"" + item_name + "\"？")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
 
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 if (favAndHisManager.deleteHistory(item_id)) {
                                     //删除成功
-                                    Toast.makeText(FavAndHisActivity.this, "删除成功", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(FavAndHisActivity.this, "History deleted", Toast.LENGTH_SHORT).show();
                                     initDataHistory();
                                     historyContent.invalidate();
                                 } else {
-                                    Toast.makeText(FavAndHisActivity.this, "删除失败", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(FavAndHisActivity.this, "Failed", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         })
-                        .setNegativeButton("取消", null)
+                        .setNegativeButton("Cancel", null)
                         .create()
                         .show();
             } else if (view.getId() == R.id.item_longclicked_deleteAllHistories) {
                 new AlertDialog.Builder(FavAndHisActivity.this)
-                        .setTitle("清空历史")
-                        .setMessage("是否要清空历史？")
-                        .setPositiveButton("清空", new DialogInterface.OnClickListener() {
+                        .setTitle("Clear history")
+                        .setMessage("Clear history？")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
 
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 if (favAndHisManager.deleteAllHistories()) {
                                     //删除成功
-                                    Toast.makeText(FavAndHisActivity.this, "成功清空", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(FavAndHisActivity.this, "History cleared", Toast.LENGTH_SHORT).show();
                                     initDataHistory();
                                     historyContent.invalidate();
                                 } else {
-                                    Toast.makeText(FavAndHisActivity.this, "清空失败", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(FavAndHisActivity.this, "Failed", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         })
-                        .setNegativeButton("取消", null)
+                        .setNegativeButton("Cancel", null)
                         .create()
                         .show();
             }

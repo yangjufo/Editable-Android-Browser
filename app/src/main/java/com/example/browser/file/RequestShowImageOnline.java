@@ -35,7 +35,7 @@ public class RequestShowImageOnline extends AsyncTask<String, String, Bitmap> {
     protected void onPreExecute() {
         super.onPreExecute();
         this.dialog = new AlertDialog.Builder(this.context)
-                .setMessage("正在加载...")
+                .setMessage("loading...")
                 .create();
         this.dialog.show();
     }

@@ -51,7 +51,7 @@ public class MainActivity extends FragmentActivity {
 
     private verticalViewPager mViewPager;
     private fragAdapter fragPagerAdapter;
-    private  int thewidth,theheigt;
+    private  int thewidth,theheight;
 
     private LinearLayout llayoutviewpage;
     private LinearLayout pagebarlt;
@@ -66,6 +66,9 @@ public class MainActivity extends FragmentActivity {
     public static final int REQUEST_DEFAULT = -1;
     public static final int REQUEST_OPEN_FAV_OR_HIS = 0;
     public static final int REQUEST_SAVE_IMAGE_PATH = 0;
+
+    public MainActivity() {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -149,8 +152,8 @@ public class MainActivity extends FragmentActivity {
     private boolean currentIsFull = true;//当前是不是全屏
 
     private void zoomchange() {
-        Log.d("before","放大  " + thewidth + " ----  " + dm2.widthPixels);
-        Log.d("before","放大  " + theheigt + " ----  " + dm2.heightPixels);
+        Log.d("before","enlarge  " + thewidth + " ----  " + dm2.widthPixels);
+        Log.d("before","enlarge  " + theheight + " ----  " + dm2.heightPixels);
         if (dm2.widthPixels - mViewPager.getWidth() < 5) {
             mViewPager.setPageMargin(fragConst.page_interval);
             //   Logger.v("缩小  " + thewidth);
@@ -170,8 +173,8 @@ public class MainActivity extends FragmentActivity {
             pagebarlt.setVisibility(VISIBLE);
             EventBus.getDefault().post(new zoomEvent(false));
         } else {
-                Log.d("test","放大  " + thewidth + " ----  " + dm2.widthPixels);
-            Log.d("test","放大  " + thewidth + " ----  " + dm2.heightPixels);
+                Log.d("test","enlarge  " + thewidth + " ----  " + dm2.widthPixels);
+            Log.d("test","enlarge  " + thewidth + " ----  " + dm2.heightPixels);
             mViewPager.setPageMargin(0);
             llayoutviewpage.setGravity(CENTER_IN_PARENT);
             //放大到原来样子

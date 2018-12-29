@@ -11,7 +11,7 @@
         android:layout_height="20dp"
         android:textColor="@android:color/white"
         android:textSize="16sp"
-        android:text="@string/deleteFloder"
+        android:text="@string/deleteFolder"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="20dp"/>
@@ -22,7 +22,7 @@
         android:layout_height="20dp"
         android:textColor="@android:color/white"
         android:textSize="16sp"
-        android:text="@string/newNameForFloder"
+        android:text="@string/newNameForFolder"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"

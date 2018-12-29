@@ -9,7 +9,7 @@
         android:id="@+id/dialog_newNameForFloder_floderName"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:hint="@string/newNameForFloder"
+        android:hint="@string/newNameForFolder"
         android:layout_margin="10dp"
         />
 

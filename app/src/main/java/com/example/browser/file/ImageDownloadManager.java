@@ -51,7 +51,7 @@ public class ImageDownloadManager extends AsyncTask<String, String, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        Toast.makeText(context, "成功下载", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "Download succeeds", Toast.LENGTH_SHORT).show();
         super.onPostExecute(result);
     }
 

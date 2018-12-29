@@ -27,7 +27,7 @@
             android:layout_height="30dp"
             android:layout_marginTop="8dp"
             android:layout_marginRight="8dp"
-            android:text="新建目录"
+            android:text="@string/createNewFolder"
             android:layout_gravity="right|center_vertical"
             android:background="@android:color/white"
             android:textColor="@android:color/black"

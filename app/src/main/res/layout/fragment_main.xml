@@ -29,7 +29,7 @@
                     android:layout_height="30dp"
                     android:layout_weight="0.9"
                     android:layout_margin="8dp"
-                    android:hint="主页"
+                    android:hint="@string/homepage"
                     android:textSize="15dp"
                     android:paddingLeft="5dp"
                     android:focusable="true"
@@ -58,7 +58,7 @@
                     android:layout_weight="0.1"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="8dp"
-                    android:text="取消"
+                    android:text="@string/cancel"
                     android:background="#00000000"
                     android:scaleType="fitCenter"
                     android:src="@drawable/cancle_button"
@@ -80,6 +80,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="46dp"
                 >
 
                 <android.support.v4.widget.SwipeRefreshLayout

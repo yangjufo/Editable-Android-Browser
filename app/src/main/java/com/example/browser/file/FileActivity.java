@@ -138,9 +138,9 @@ public class FileActivity extends Activity {
             if (v.getId() == R.id.item_longclicked_deleteFloder) {
                 //删除文件夹
                 new AlertDialog.Builder(FileActivity.this)
-                        .setTitle("删除目录")
-                        .setMessage("是否删除\""+folderPathStr+"\"目录")
-                        .setPositiveButton("删除", new DialogInterface.OnClickListener() {
+                        .setTitle("Delete directory")
+                        .setMessage("Delete\""+folderPathStr+"\"?")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 File deleteDictory = new File(folderPathStr);
@@ -151,7 +151,7 @@ public class FileActivity extends Activity {
                                 }
                             }
                         })
-                        .setNegativeButton("取消", null)
+                        .setNegativeButton("Cancel", null)
                         .create()
                         .show();
             } else if (v.getId() == R.id.item_longclicked_newNameForFolder) {
@@ -160,9 +160,9 @@ public class FileActivity extends Activity {
                 final TextView folderName = (TextView) newNameForFolderView.findViewById(R.id.dialog_newNameForFloder_floderName);
                 folderName.setText(oldFolderName.getText().toString());
                 new AlertDialog.Builder(FileActivity.this)
-                        .setTitle("重命名")
+                        .setTitle("Rename directory")
                         .setView(newNameForFolderView)
-                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 String newFolderName = folderName.getText().toString();
@@ -172,7 +172,7 @@ public class FileActivity extends Activity {
                                 fileManager.execute(currentPath);
                             }
                         })
-                        .setNegativeButton("取消", null)
+                        .setNegativeButton("Cancel", null)
                         .create()
                         .show();
             }
@@ -198,9 +198,9 @@ public class FileActivity extends Activity {
                 View createNewFolderView = LayoutInflater.from(FileActivity.this).inflate(R.layout.dialog_createnewfolder, null);
                 final EditText newFolderName = (EditText) createNewFolderView.findViewById(R.id.dialog_createNewFloder_floderName);
                 new AlertDialog.Builder(FileActivity.this)
-                        .setTitle("创建新目录")
+                        .setTitle("Create new directory")
                         .setView(createNewFolderView)
-                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 String createNewPath = currentPath+"/"+newFolderName.getText().toString();
@@ -210,12 +210,12 @@ public class FileActivity extends Activity {
                                     fileManager = new FileShowManager(FileActivity.this, fileList);
                                     fileManager.execute(currentPath);
                                 } else {
-                                    Toast.makeText(FileActivity.this, "目录已存在", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(FileActivity.this, "Name exists", Toast.LENGTH_SHORT).show();
 
                                 }
                             }
                         })
-                        .setNegativeButton("取消", null)
+                        .setNegativeButton("Cancel", null)
                         .create()
                         .show();
             }

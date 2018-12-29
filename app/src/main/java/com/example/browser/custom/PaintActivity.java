@@ -327,18 +327,18 @@ public class PaintActivity extends Activity {
 
                 //保存文件
                 saveImageToChoosePath = new AlertDialog.Builder(PaintActivity.this)
-                        .setTitle("选择保存路径")
+                        .setTitle("Choose path")
                         .setView(dialogSaveImg)
-                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 //写入文件
                                 new ImageCaptureManager(PaintActivity.this, imgName, choosePath.getText().toString(), handWrite.new1Bitmap);
-                                Toast.makeText(PaintActivity.this, "编辑网页成功保存", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(PaintActivity.this, "Edited page saved", Toast.LENGTH_SHORT).show();
                                 editedPageCount++; //已保存文件数加1
                             }
                         })
-                        .setNegativeButton("取消", null)
+                        .setNegativeButton("Cancel", null)
                         .create();
                 saveImageToChoosePath.show();
             } else if (view.getId() == R.id.edit_page_quit) {

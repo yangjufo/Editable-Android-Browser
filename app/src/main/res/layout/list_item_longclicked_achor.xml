@@ -11,7 +11,7 @@
         android:layout_height="20dp"
         android:textColor="@android:color/white"
         android:textSize="16sp"
-        android:text="打开链接"
+        android:text="@string/open_link"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="20dp" />
@@ -22,7 +22,7 @@
         android:layout_height="20dp"
         android:textColor="@android:color/white"
         android:textSize="16sp"
-        android:text="复制链接"
+        android:text="@string/copy_link"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="15dp"

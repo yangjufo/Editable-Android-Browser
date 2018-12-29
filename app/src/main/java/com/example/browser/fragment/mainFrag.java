@@ -252,7 +252,7 @@ public class mainFrag extends baseFrag implements SwipeRefreshLayout.OnRefreshLi
 
         webHolder.setWebViewClient(new MyWebViewClient());
         webHolder.setWebChromeClient(new MyChromeClient()); //set progressbar
-        webHolder.loadUrl("http://192.168.43.139:5000");
+        webHolder.loadUrl("https://www.jianyang995.com");
         //webHolder.setOnTouchListener(webViewTouchListener);
         webHolder.setOnLongClickListener(webViewLongClickedListener);
 
@@ -492,7 +492,7 @@ public class mainFrag extends baseFrag implements SwipeRefreshLayout.OnRefreshLi
                 webUrlStr.clearFocus();
                 url = webUrlStr.getText().toString();
                 if(!(url.startsWith("http://")||url.startsWith("https://"))){
-                    url = "http://m.baidu.com/s?word="+url;
+                    url = "https://www.google.com#q="+url;
                 }
                 webHolder.loadUrl(url);
             } else if(view.getId() == R.id.web_url_cancel) {
@@ -508,7 +508,7 @@ public class mainFrag extends baseFrag implements SwipeRefreshLayout.OnRefreshLi
                 if(webHolder.canGoForward())
                     webHolder.goForward();
             } else if (view.getId() == R.id.home_button) {
-                webHolder.loadUrl("http://192.168.43.139:5000");
+                webHolder.loadUrl("https://www.jianyang995.com");
             } else if (view.getId() == R.id.window_button) {
                 EventBus.getDefault().post(new windowEvent());
             } else if (view.getId() == R.id.tools_button) {
@@ -544,7 +544,7 @@ public class mainFrag extends baseFrag implements SwipeRefreshLayout.OnRefreshLi
                     toolsPopWindow.showAtLocation(toolsView, Gravity.BOTTOM| Gravity.RIGHT, 20, tools.getHeight()+40);
                     Button privateBrowsing = (Button) toolsPopWindow.getView(R.id.private_browsing);
                     privateBrowsing.setBackgroundColor(Color.parseColor("#EFEFF1"));
-                    Toast.makeText(getActivity(), "无痕浏览已关闭", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Private mode closed", Toast.LENGTH_SHORT).show();
                     isPrivateBrowsing = false;
                 } else {
                     LayoutInflater toolsInflater = LayoutInflater.from(getActivity().getApplicationContext());
@@ -552,7 +552,7 @@ public class mainFrag extends baseFrag implements SwipeRefreshLayout.OnRefreshLi
                     toolsPopWindow.showAtLocation(toolsView, Gravity.BOTTOM| Gravity.RIGHT, 20, tools.getHeight()+40);
                     Button privateBrowsing = (Button) toolsPopWindow.getView(R.id.private_browsing);
                     privateBrowsing.setBackgroundColor(Color.parseColor("#DDFFFF"));
-                    Toast.makeText(getActivity(), "无痕浏览已开启", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Private mode on", Toast.LENGTH_SHORT).show();
                     isPrivateBrowsing = true;
                 }
 
@@ -560,7 +560,7 @@ public class mainFrag extends baseFrag implements SwipeRefreshLayout.OnRefreshLi
                 //添加书签
                 favAndHisManager.addFavorite(title, url);
                 favAndHisManager.getAllFavorites();
-                Toast.makeText(getActivity(), "新闻收藏成功", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Page saved", Toast.LENGTH_SHORT).show();
             } else if (view.getId() ==R.id.show_favorite_button) {
                 //查看编辑书签
                 toolsPopWindow.dismiss();
@@ -610,16 +610,16 @@ public class mainFrag extends baseFrag implements SwipeRefreshLayout.OnRefreshLi
                     }
                 });
                 saveImageToChoosePath = new AlertDialog.Builder(getActivity())
-                        .setTitle("选择保存路径")
+                        .setTitle("Choose path")
                         .setView(dialogSaveImg)
-                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 new ImageCaptureManager(getActivity(), imgName, choosePath.getText().toString(), sBitmap);
-                                Toast.makeText(getActivity(), "截图成功保存", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), "Screenshot saved", Toast.LENGTH_SHORT).show();
                             }
                         })
-                        .setNegativeButton("取消", null)
+                        .setNegativeButton("Cancel", null)
                         .create();
                 saveImageToChoosePath.show();
 
@@ -675,15 +675,15 @@ public class mainFrag extends baseFrag implements SwipeRefreshLayout.OnRefreshLi
                     }
                 });
                 saveImageToChoosePath = new AlertDialog.Builder(getActivity())
-                        .setTitle("选择保存路径")
+                        .setTitle("Choose path")
                         .setView(dialogSaveImg)
-                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 new ImageDownloadManager(getActivity()).execute(imgName, value, choosePath.getText().toString());
                             }
                         })
-                        .setNegativeButton("取消", null)
+                        .setNegativeButton("Cancel", null)
                         .create();
                 saveImageToChoosePath.show();
             } else if (v.getId() == R.id.item_longclicked_viewImageAttributes) {
@@ -724,7 +724,7 @@ public class mainFrag extends baseFrag implements SwipeRefreshLayout.OnRefreshLi
             } else if (v.getId() == R.id.item_longclicked_copyAchor) {
                 clipboardManager = (ClipboardManager)getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
                 clipboardManager.setPrimaryClip(ClipData.newPlainText(null, url));
-                Toast.makeText(getActivity(), "网址复制成功", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "URL copied", Toast.LENGTH_SHORT).show();
             }
         }
     }

@@ -102,7 +102,7 @@ public class FileShowManager extends AsyncTask<String, String, List<HashMap<Stri
             root.put("name", "/");
             root.put("img", R.drawable.folder_home_back);
             root.put("path", SDCARD_HOME);
-            root.put("childnums", "返回根目录");
+            root.put("childnums", "Back to root");
             root.put("date", "");
             list.add(root);
             HashMap<String, Object> pmap = new HashMap<String, Object>();
@@ -111,7 +111,7 @@ public class FileShowManager extends AsyncTask<String, String, List<HashMap<Stri
             int endIndex = path.lastIndexOf("/");
             String parentPath = path.substring(0, endIndex);
             pmap.put("path", parentPath);
-            pmap.put("childnums", "返回上一级");
+            pmap.put("childnums", "Back to former level");
             pmap.put("date", "");
             list.add(pmap);
         }
@@ -124,7 +124,7 @@ public class FileShowManager extends AsyncTask<String, String, List<HashMap<Stri
                     item.put("img", R.drawable.folder_back);
                     item.put("name", file.getName());
                     item.put("path", file.getPath());
-                    item.put("childnums", "共有"+this.getDirectoryNums(file)+"项");
+                    item.put("childnums", "Total" + this.getDirectoryNums(file)+" items");
                     item.put("date", new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.CHINA).format(file.lastModified()));
                     list.add(item);
                 }
