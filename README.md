@@ -1,10 +1,10 @@
 # Android-Browser
 
 ## Basic Information
-An android browser with web page editing function. It is built on Android version 6.0, based on Webview.
+An Android browser with web page editing function. It is built on Android version 6.0, based on Webview.
 
 ## Page Edit
-The idea here is capture the web page as a picture and then draw on it.
+The idea here is to capture the web page as a picture and then draw on it.
 ### Support
 1. 3 kinds of pens (settings include color and size)
 2. Undo, Redo
