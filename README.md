@@ -4,7 +4,7 @@
 An Android browser with web page editing function. It is built on Android version 6.0, based on Webview.
 
 ### Video Demo
-[![image video](http://i3.ytimg.com/vi/iFBAaHzVNBI/hqdefault.jpg)](https://www.youtube.com/watch?v=iFBAaHzVNBI&t)
+[![image video](https://raw.githubusercontent.com/yangjufo/Android-Browser/master/readme/video_cover.jpg)](https://www.youtube.com/watch?v=iFBAaHzVNBI&t)
 
 ## Page Edit
 The idea here is to capture the web page as a picture and then draw on it.
